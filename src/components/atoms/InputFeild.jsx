@@ -11,7 +11,7 @@ const InputField = ({
   const [field, meta] = useField(props);
   return (
     <div className="w-full">
-      <div className="flex rounded-lg p-3 w-full bg-ghostwhite">
+      <label className="flex rounded-lg p-3 w-full bg-ghostwhite">
         <input
           className="outline-none border-none w-full text-sm font-medium bg-ghostwhite placeholder:text-slategray"
           autoComplete="true"
@@ -35,7 +35,7 @@ const InputField = ({
               <HideIcon className="w-4 h-5" />
             </button>
           ))}
-      </div>
+      </label>
 
       {meta.touched && meta.error ? (
         <p className="error text-start text-red-600">{meta.error}</p>
